@@ -1,23 +1,27 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import logo from "../assets/logo.png";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
-    <nav className="sticky top-0 bg-white z-3">
-      <header className="flex justify-between items-center px-8 py-2 relative">
-        <div className="flex gap-2 items-center">
-          <img
-            src={logo}
-            alt="logo"
-            className="size-9 border-1 border-gray-500/40 rounded-full p-0.5"
-          />
-          <h2>Logo Name</h2>
-        </div>
+    <nav className="sticky top-0 z-3 w-full bg-black/90 text-white backdrop-blur-md">
+      <header className="flex justify-between items-center py-2 relative mx-auto max-w-350 not-md:px-1.5">
+        <Link to="/">
+          <h2
+            className="font-bold font-sora text-2xl pt-3"
+            style={{ lineHeight: 0.5 }}
+          >
+            FABIAN
+          </h2>
+          <h3 className="text-lg font-bold">Photographer</h3>
+        </Link>
 
         <ul className="hidden md:flex gap-2">
-          <li>Gallary</li>
+          <Link to="/gallery" onClick={toggleMenu}>
+            Gallery
+          </Link>
           <li>About</li>
           <li>Contact</li>
         </ul>
@@ -25,11 +29,13 @@ export default function Header() {
         <ul
           className={
             isOpen
-              ? "absolute bg-white top-0 left-0 w-1/2 h-screen border visible pt-4 pl-4 transition-all duration-300"
-              : "absolute bg-white top-0 left-0 w-[0%] h-screen border invisible pt-4 pl-0 transition-all duration-300"
+              ? "absolute bg-white top-0 left-0 w-1/2 h-screen border visible pt-4 pl-4 transition-all duration-300 text-black"
+              : "absolute bg-white top-0 left-0 w-[0%] h-screen border invisible pt-4 pl-0 transition-all duration-300 text-black"
           }
         >
-          <li onClick={toggleMenu}>Gallary</li>
+          <Link to="/gallery" onClick={toggleMenu}>
+            Gallery
+          </Link>
           <li onClick={toggleMenu}>About</li>
           <li onClick={toggleMenu}>Contact</li>
         </ul>
