@@ -11,7 +11,82 @@ export default function Potraits() {
       <Header />
       <h2 className="font-sora text-[10rem] text-center font-black">Potrait</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-2 max-w-350 mx-auto">
-        <img src={pic1} alt="" />
+        <img
+          src={pic1}
+          alt=""
+          onClick={() => document.getElementById("modal").showModal()}
+        />
+        <dialog className="modal backdrop-blur-sm" id="modal">
+          <form method="dialog" className="modal-backdrop">
+            <button className="btn btn-sm btn-circle absolute right-2 top-2">
+              ✕
+            </button>
+          </form>
+          <div className="modal-box w-full max-w-5xl p-0 bg-transparent shadow-none rounded-none mt-10">
+            {/* Carousel */}
+            <div className="carousel w-full max-h-[90vh]">
+              <div id="slide1" className="carousel-item relative w-full h-auto">
+                <img src={pic1} alt="" className="mx-auto object-cover" />
+                <div className="absolute left-5 right-5 top-1/2 hidden md:flex -translate-y-1/2 transform justify-between">
+                  <a href="#slide5" className="btn btn-circle">
+                    ❮
+                  </a>
+                  <a href="#slide2" className="btn btn-circle">
+                    ❯
+                  </a>
+                </div>
+              </div>
+
+              <div id="slide2" className="carousel-item relative w-full h-auto">
+                <img src={pic2} alt="" className="mx-auto object-cover" />
+                <div className="absolute left-5 right-5 top-1/2 hidden md:flex -translate-y-1/2 transform justify-between">
+                  <a href="#slide1" className="btn btn-circle">
+                    ❮
+                  </a>
+                  <a href="#slide3" className="btn btn-circle">
+                    ❯
+                  </a>
+                </div>
+              </div>
+
+              <div id="slide3" className="carousel-item relative w-full h-auto">
+                <img src={pic3} alt="" className="mx-auto object-cover" />
+                <div className="absolute left-5 right-5 top-1/2 hidden md:flex -translate-y-1/2 transform justify-between">
+                  <a href="#slide2" className="btn btn-circle">
+                    ❮
+                  </a>
+                  <a href="#slide4" className="btn btn-circle">
+                    ❯
+                  </a>
+                </div>
+              </div>
+
+              <div id="slide4" className="carousel-item relative w-full h-auto">
+                <img src={pic4} alt="" className="mx-auto object-cover" />
+                <div className="absolute left-5 right-5 top-1/2 hidden md:flex -translate-y-1/2 transform justify-between">
+                  <a href="#slide3" className="btn btn-circle">
+                    ❮
+                  </a>
+                  <a href="#slide5" className="btn btn-circle">
+                    ❯
+                  </a>
+                </div>
+              </div>
+
+              <div id="slide5" className="carousel-item relative w-full h-auto">
+                <img src={pic5} alt="" className="mx-auto object-cover" />
+                <div className="absolute left-5 right-5 top-1/2 hidden md:flex -translate-y-1/2 transform justify-between">
+                  <a href="#slide4" className="btn btn-circle">
+                    ❮
+                  </a>
+                  <a href="#slide1" className="btn btn-circle">
+                    ❯
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </dialog>
         <img src={pic2} alt="" />
         <img src={pic3} alt="" />
         <img src={pic4} alt="" />
