@@ -7,6 +7,7 @@ import Header from "../layouts/Header";
 import pic1 from "../assets/wedding/1.jpg";
 import pic2 from "../assets/wedding/2.jpg";
 import pic3 from "../assets/wedding/3.jpg";
+import Image from "../components/ui/Image";
 
 export default function Weddings() {
   const pic = useRef(null);
@@ -26,15 +27,13 @@ export default function Weddings() {
       <Header />
 
       <main className="bg-gray-100">
-        <h2 className="font-sora text-[10rem] text-center font-black">
+        <h2 className="font-sora text-6xl md:text-[10rem] text-center font-black py-2">
           Wedding
         </h2>
-        <div className="grid grid-cols-8 md:grid-cols-3 gap-2 max-w-350 mx-auto">
-          <img
-            src={pic1}
-            alt=""
-            onClick={() => document.getElementById("modal").showModal()}
-          />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 max-w-350 mx-auto">
+          <Image img={pic1} />
+          <Image img={pic3} />
+          <Image img={pic2} className="row-span-2" />
           <dialog className="modal backdrop-blur-sm" id="modal">
             <form method="dialog" className="modal-backdrop">
               <button className="btn btn-sm btn-circle absolute right-2 top-2">
@@ -91,9 +90,6 @@ export default function Weddings() {
               </div>
             </div>
           </dialog>
-
-          <img src={pic3} alt="" />
-          <img src={pic2} alt="" className="row-span-2" />
         </div>
       </main>
     </>

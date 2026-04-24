@@ -13,15 +13,29 @@ export default function Header() {
             className="font-bold font-sora text-2xl pt-3"
             style={{ lineHeight: 0.5 }}
           >
-            FABIAN
+            Mr. Sololobo
           </h2>
-          <h3 className="text-lg font-bold">Photographer</h3>
+          <h3 className="text-lg font-bold">PicZel Pictures</h3>
         </Link>
 
         <ul className="hidden md:flex gap-2">
-          <Link to="/gallery" onClick={toggleMenu}>
-            Gallery
-          </Link>
+          <button popoverTarget="gallaries" style={{ anchorName: "category" }}>
+            Gallary
+          </button>
+
+          <ul
+            className="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
+            popover="auto"
+            id="gallaries"
+            style={{ positionAnchor: "category" }}
+          >
+            <li className="text-black">
+              <Link to="/category/wedding">wedding</Link>
+            </li>
+            <li className="text-black">
+              <Link to="/category/potrait">potrait</Link>
+            </li>
+          </ul>
           <li>About</li>
           <li>Contact</li>
         </ul>

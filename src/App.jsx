@@ -18,6 +18,7 @@ import wedding from "./assets/placeholder/wedding.jpg";
 import event from "./assets/placeholder/event.jpg";
 import street from "./assets/placeholder/street.jpg";
 import Placeholder from "./components/ui/placeholder";
+import photographer from "./assets/logo.png";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -101,7 +102,7 @@ function App() {
 
         {/* About */}
         <section className="flex gap-4 max-w-350 mx-auto">
-          <img src={pic1} alt="" className="w-1/2" />
+          <img src={photographer} alt="" className="w-1/2" />
           <div className="w-1/2 space-y-4">
             <h2 className="font-sora text-6xl font-bold">
               <span>---</span> About the <br /> photographer.
