@@ -1,9 +1,9 @@
 import Header from "../layouts/Header";
-import pic1 from "../assets/potraits/1.jpg";
-import pic2 from "../assets/potraits/2.jpg";
-import pic3 from "../assets/potraits/3.jpg";
-import pic4 from "../assets/potraits/4.jpg";
-import pic5 from "../assets/potraits/5.jpg";
+import pic1 from "../assets/portraits/1.jpg";
+import pic2 from "../assets/portraits/2.jpg";
+import pic3 from "../assets/portraits/3.jpg";
+import pic4 from "../assets/portraits/4.jpg";
+import pic5 from "../assets/portraits/5.jpg";
 import Image from "../components/ui/Image";
 
 export default function Portraits() {

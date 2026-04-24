@@ -12,12 +12,11 @@ import pic1 from "./assets/1.jpg";
 import pic2 from "./assets/2.jpg";
 import pic3 from "./assets/3.jpg";
 import pic4 from "./assets/4.jpg";
-import pic5 from "./assets/5.jpg";
 import potrait from "./assets/placeholder/potrait.jpg";
 import wedding from "./assets/placeholder/wedding.jpg";
 import event from "./assets/placeholder/event.jpg";
 import street from "./assets/placeholder/street.jpg";
-import Placeholder from "./components/ui/placeholder";
+import Placeholder from "./components/ui/Placeholder.jsx";
 import photographer from "./assets/logo.png";
 
 function App() {
