@@ -2,8 +2,8 @@ import Header from "../layouts/Header";
 import pic1 from "../assets/portraits/1.jpg";
 import pic2 from "../assets/portraits/2.jpg";
 import pic3 from "../assets/portraits/3.jpg";
-import pic4 from "../assets/portraits/4.jpg";
-import pic5 from "../assets/portraits/5.jpg";
+/* import pic4 from "../assets/portraits/4.jpg";
+import pic5 from "../assets/portraits/5.jpg"; */
 import Image from "../components/ui/Image";
 
 export default function Portraits() {
@@ -17,8 +17,8 @@ export default function Portraits() {
         <Image img={pic1} />
         <Image img={pic2} />
         <Image img={pic3} />
-        <Image img={pic4} />
-        <Image img={pic5} />
+        {/* <Image img={pic4} />
+        <Image img={pic5} /> */}
 
         <dialog className="modal backdrop-blur-sm" id="modal">
           <form method="dialog" className="modal-backdrop">
@@ -65,7 +65,7 @@ export default function Portraits() {
                 </div>
               </div>
 
-              <div id="slide4" className="carousel-item relative w-full h-auto">
+              {/* <div id="slide4" className="carousel-item relative w-full h-auto">
                 <img src={pic4} alt="" className="mx-auto object-cover" />
                 <div className="absolute left-5 right-5 top-1/2 hidden md:flex -translate-y-1/2 transform justify-between">
                   <a href="#slide3" className="btn btn-circle">
@@ -75,9 +75,9 @@ export default function Portraits() {
                     ❯
                   </a>
                 </div>
-              </div>
+              </div> */}
 
-              <div id="slide5" className="carousel-item relative w-full h-auto">
+              {/* <div id="slide5" className="carousel-item relative w-full h-auto">
                 <img src={pic5} alt="" className="mx-auto object-cover" />
                 <div className="absolute left-5 right-5 top-1/2 hidden md:flex -translate-y-1/2 transform justify-between">
                   <a href="#slide4" className="btn btn-circle">
@@ -87,7 +87,7 @@ export default function Portraits() {
                     ❯
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </dialog>
